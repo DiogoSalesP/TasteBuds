@@ -1,12 +1,16 @@
-import { TextInput } from "react-native";
+import { Alert, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { Props } from "./type";
+import { Sc } from "./style";
 
 
-function Button({ placeholder }: Props) {
+function Button({ title, onPress }: Props) {
+
   return (
-    <TextInput
-      placeholder={placeholder}
-    />
+  <TouchableOpacity onPress={onPress}>
+    <Sc.Content>
+      <Sc.Title>{title}</Sc.Title>
+    </Sc.Content>
+  </TouchableOpacity>
   )
 }
 

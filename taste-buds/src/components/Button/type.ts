@@ -1,3 +1,4 @@
 export type Props = {
-  placeholder: string;
+  title: string;
+  onPress: () => void;
 }
